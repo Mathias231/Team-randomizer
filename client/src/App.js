@@ -1,5 +1,3 @@
-import './css/App.css';
-
 // Importing components
 import Input from './components/Input/Input';
 
