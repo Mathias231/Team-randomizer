@@ -1,9 +1,12 @@
 import './css/App.css';
 
+// Importing components
+import Input from './components/Input/Input';
+
 function App() {
   return (
     <div className="App">
-      Team randomizer
+      <Input />
     </div>
   );
 }
