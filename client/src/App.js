@@ -1,6 +1,6 @@
 // Importing components
 import Randomize from './components/Form/RandomizeForm';
-
+import InfoBox from './components/InfoBox/InfoBox';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <div className="grid grid-flow-col space-x-5">
         <div className="col-span-4 border-2 rounded-md border-rose-500">
           <h1 className="text-3xl text-center font-bold">Generate Team</h1>
+          <InfoBox />
           <Randomize />
         </div>
         <div className="col-span-2 border-2 rounded-md border-rose-500">
