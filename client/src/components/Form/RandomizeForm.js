@@ -5,7 +5,7 @@ import Input from '../Input/Input';
 
 export default function Randomize(props) {
     return(
-        <div className="max-w-xl bg-black">
+        <div className="max-w-sm bg-black m-5">
             <Input />
         </div>
     )
