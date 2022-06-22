@@ -1,6 +1,6 @@
 // Importing components
-import Randomize from './components/Form/RandomizeForm';
-import InfoBox from './components/InfoBox/InfoBox';
+import Randomize from './Components/Form/RandomizeForm';
+import InfoBox from './Components/InfoBox/InfoBox';
 
 function App() {
   return (
