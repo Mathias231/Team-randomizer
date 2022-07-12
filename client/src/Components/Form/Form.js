@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function Form() {
     // Variable for selected teams
-    const [select, setSelect] = useState("1>");
+    const [select, setSelect] = useState("1");
 
     // Variable for text field
     const [names, setNames] =  useState("");
