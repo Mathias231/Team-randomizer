@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 
 export default function Form() {
+    // Variable for selected teams
     const [select, setSelect] = useState("");
+
+    const handleClick = (e) => {
+        // Hent value fra Select og innhold i text field
+    }
 
     const handleChange = (e) => {
         const value = e.target.value
@@ -26,6 +31,10 @@ export default function Form() {
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
+            </div>
+
+            <div className="ml-5">
+                <button className="border-4 border-gray-600" onClick={handleClick}>Trykk her</button>
             </div>
         </div>
     )
