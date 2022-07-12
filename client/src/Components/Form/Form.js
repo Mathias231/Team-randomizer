@@ -33,6 +33,7 @@ export default function Form() {
                 </select>
             </div>
 
+        {/* Button */}
             <div className="ml-5">
                 <button className="border-4 border-gray-600" onClick={handleClick}>Trykk her</button>
             </div>
