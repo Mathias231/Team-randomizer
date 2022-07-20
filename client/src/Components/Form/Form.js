@@ -5,7 +5,7 @@ export default function Form() {
     const [select, setSelect] = useState("1");
 
     // Variable for text field
-    const [names, setNames] =  useState("");
+    const [names, setNames] =  useState([]);
     
     
     const handleTextField = (e) => {
@@ -20,8 +20,9 @@ export default function Form() {
 
     const handleButton = (e) => {
         // Hent value fra Select og innhold i text field
-        console.log("her er select " + select)
-        console.log("Her er text " + names)
+        const result = names.split(/\r?\n/);
+        console.log(select + "Teams")
+        console.log(result)
     }
 
     return(
