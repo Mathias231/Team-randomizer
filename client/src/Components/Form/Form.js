@@ -5,7 +5,7 @@ export default function Form() {
     const [select, setSelect] = useState("1");
 
     // Variable for text field
-    const [names, setNames] =  useState([]);
+    const [names, setNames] =  useState("");
     
     
     const handleTextField = (e) => {
