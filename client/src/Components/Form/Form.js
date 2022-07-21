@@ -7,12 +7,13 @@ export default function Form() {
     // Variable for text field
     const [names, setNames] =  useState([]);
     
-    
+    // Sets names value
     const handleTextField = (e) => {
         const value = e.target.value
         setNames(value)
     }
 
+    // Sets select value 
     const handleSelect = (e) => {
         const value = e.target.value
         setSelect(value)
@@ -22,15 +23,33 @@ export default function Form() {
         // Names from textfield gets separated by "enterspace" and put inside an array
         const arr = names.split(/\r?\n/);
 
-        // Shuffle array
-        var result = arr.sort(() => Math.random() - 0.5);
-        
-        // Divide result.length to selected teams
-        var halfSplit = result.length / select;
-        console.log(halfSplit.toFixed())
-        
-        
 
+        var team1 = [];
+        var team2 = [];
+
+        for(let i = 0; i < arr.length; i++) {
+            // Shuffle array
+            var result = arr.sort(() => Math.random() - 0.5);
+            console.log("Result length: " + result.length);
+
+            if(i % select === 0) {
+                team1.push(result[0]);
+                console.log("Team 1: " + team1)
+                result.shift();
+                console.log(result + " Fra result 1");
+
+            } else {
+                team2.push(result[0]);
+                console.log("Team 2: " + team2)
+                result.shift();
+                console.log(result + " Fra result 2");
+            }
+
+        }
+        
+        console.log("leftovers: " + result);
+        console.log("team 1: " + team1);
+        console.log("team 2: " + team2);
     }
 
     return(
