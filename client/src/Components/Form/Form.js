@@ -19,10 +19,18 @@ export default function Form() {
     }
 
     const handleButton = (e) => {
-        // Hent value fra Select og innhold i text field
-        const result = names.split(/\r?\n/);
-        console.log(select + "Teams")
-        console.log(result)
+        // Names from textfield gets separated by "enterspace" and put inside an array
+        const arr = names.split(/\r?\n/);
+
+        // Shuffle array
+        var result = arr.sort(() => Math.random() - 0.5);
+        
+        // Divide result.length to selected teams
+        var halfSplit = result.length / select;
+        console.log(halfSplit.toFixed())
+        
+        
+
     }
 
     return(
