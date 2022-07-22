@@ -28,33 +28,33 @@ export default function Form() {
         var team2 = [];
 
 
-        // for(let i = 0; i <= arr.length; i++) {
-        //     // Shuffle array
-        //     var shuffledArray = arr.sort(() => Math.random() - 0.5);
-        //     console.log("shuffledArray length: " + shuffledArray.length);
+        for(let i = 0; i <= arr.length; i++) {
+            // Shuffle array
+            var shuffledArray = arr.sort(() => Math.random() - 0.5);
+            console.log("shuffledArray length: " + shuffledArray.length);
             
-        //     // Finds modulo
-        //     var modulo = shuffledArray.length % select;
-        //     console.log("Modulo er: " + modulo)
+            // Finds modulo
+            var modulo = shuffledArray.length % select;
+            console.log("Modulo er: " + modulo)
 
-        //     // If modulo is 0, put player to team 1
-        //     if(modulo === 0) {
-        //         team1.push(shuffledArray[0]);
-        //         console.log("Team 1: " + team1)
-        //         shuffledArray.shift();
-        //         console.log(shuffledArray + " Fra shuffledArray 1");
+            // If modulo is 0, put player to team 1
+            if(modulo === 0) {
+                team1.push(shuffledArray[0]);
+                console.log("Team 1: " + team1)
+                shuffledArray.shift();
+                console.log(shuffledArray + " Fra shuffledArray 1");
                 
-        //     } else {
-        //         team2.push(shuffledArray[0]);
-        //         console.log("Team 2: " + team2)
-        //         shuffledArray.shift();
-        //         console.log(shuffledArray + " Fra shuffledArray 2");
-        //         i--;
-        //     }
-        //     console.log("Dette er i: " + i)
-        // }
+            } else {
+                team2.push(shuffledArray[0]);
+                console.log("Team 2: " + team2)
+                shuffledArray.shift();
+                console.log(shuffledArray + " Fra shuffledArray 2");
+                i--;
+            }
+            console.log("Dette er i: " + i)
+        }
         
-        // console.log("leftovers: " + shuffledArray);
+        console.log("leftovers: " + shuffledArray);
         console.log("team 1: " + team1);
         console.log("team 2: " + team2);
     }
