@@ -27,27 +27,33 @@ export default function Form() {
         var team1 = [];
         var team2 = [];
 
-        for(let i = 0; i < arr.length; i++) {
+        for(let i = 0; i <= arr.length; i++) {
             // Shuffle array
-            var result = arr.sort(() => Math.random() - 0.5);
-            console.log("Result length: " + result.length);
+            var shuffledArray = arr.sort(() => Math.random() - 0.5);
+            console.log("shuffledArray length: " + shuffledArray.length);
+            
+            // Finds modulo
+            var modulo = shuffledArray.length % select;
+            console.log("Modulo er: " + modulo)
 
-            if(i % select === 0) {
-                team1.push(result[0]);
+            // If modulo is 0. put player to a team
+            if(modulo === 0) {
+                team1.push(shuffledArray[0]);
                 console.log("Team 1: " + team1)
-                result.shift();
-                console.log(result + " Fra result 1");
-
+                shuffledArray.shift();
+                console.log(shuffledArray + " Fra shuffledArray 1");
+                
             } else {
-                team2.push(result[0]);
+                team2.push(shuffledArray[0]);
                 console.log("Team 2: " + team2)
-                result.shift();
-                console.log(result + " Fra result 2");
+                shuffledArray.shift();
+                console.log(shuffledArray + " Fra shuffledArray 2");
+                i--;
             }
-
+            console.log("Dette er i: " + i)
         }
         
-        console.log("leftovers: " + result);
+        console.log("leftovers: " + shuffledArray);
         console.log("team 1: " + team1);
         console.log("team 2: " + team2);
     }
