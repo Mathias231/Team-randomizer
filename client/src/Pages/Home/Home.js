@@ -1,5 +1,7 @@
 import Form from '../../Components/Form/Form';
-import InfoBox from '../../Components/InfoBox/InfoBox'
+import InfoBox from '../../Components/InfoBox/InfoBox';
+
+
 function HomePage() {
     return (
     <div className="container mx-auto px-0 xl:px-5 mt-5">
