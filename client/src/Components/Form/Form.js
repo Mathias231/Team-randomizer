@@ -19,44 +19,111 @@ export default function Form() {
         setSelect(value)
     }
 
+
     const handleButton = (e) => {
         // Names from textfield gets separated by "enterspace" and put inside an array
         const arr = names.split(/\r?\n/);
         console.log(arr);
 
+        // Shuffle array
+        var shuffledArray = arr.sort(() => Math.random() - 0.5);
+        console.log("shuffledArray length: " + shuffledArray.length);
+
+        // Teams
         var team1 = [];
         var team2 = [];
+        var team3 = [];
+        var team4 = [];
 
-
-        for(let i = 0; i <= arr.length; i++) {
-            // Shuffle array
-            var shuffledArray = arr.sort(() => Math.random() - 0.5);
-            console.log("shuffledArray length: " + shuffledArray.length);
-            
-            // Finds modulo
-            var modulo = shuffledArray.length % select;
-            console.log("Modulo er: " + modulo)
-
-            // If modulo is 0, put player to team 1
-            if(modulo === 0) {
-                team1.push(shuffledArray[0]);
-                console.log("Team 1: " + team1)
-                shuffledArray.shift();
-                console.log(shuffledArray + " Fra shuffledArray 1");
-                
-            } else {
-                team2.push(shuffledArray[0]);
-                console.log("Team 2: " + team2)
-                shuffledArray.shift();
-                console.log(shuffledArray + " Fra shuffledArray 2");
-                i--;
-            }
-            console.log("Dette er i: " + i)
-        }
+        switch(select) {
+            case "1":
+                team1.push(shuffledArray);
+                break;
+            case "2":
+                for(let i = 0; i = arr.length; i++) {
+                    // Finds modulo
+                    var modulo2 = shuffledArray.length % select;
+                    console.log("Modulo er: " + modulo2)
         
-        console.log("leftovers: " + shuffledArray);
-        console.log("team 1: " + team1);
-        console.log("team 2: " + team2);
+                    // If modulo is 0, put player to team 1
+                    if(modulo2 === 0) {
+                        team1.push(shuffledArray[0]);
+                        console.log("Team 1: " + team1)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 1");
+                    } else {
+                        team2.push(shuffledArray[0]);
+                        console.log("Team 2: " + team2)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 2");
+                    }
+                    console.log("Dette er i: " + i)
+                }
+                break;
+            case "3":
+                for(let i = 0; i = arr.length; i++) {
+                    // Finds modulo
+                    var modulo3 = shuffledArray.length % select;
+                    console.log("Modulo er: " + modulo3)
+        
+                    // If modulo is 0, put player to team 1
+                    if(modulo3 === 0) {
+                        team1.push(shuffledArray[0]);
+                        console.log("Team 1: " + team1)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 1");
+                    } else if(modulo3 === 2) {
+                        team2.push(shuffledArray[0]);
+                        console.log("Team 2: " + team2)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 2");
+                    } else {
+                        team3.push(shuffledArray[0]);
+                        console.log("Team 2: " + team3)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 3");
+                    }
+                    console.log("Dette er i: " + i)
+                }
+                break;
+            case "4":
+                for(let i = 0; i = arr.length; i++) {
+                    // Finds modulo
+                    var modulo4 = shuffledArray.length % select;
+                    console.log("Modulo er: " + modulo3)
+        
+                    // If modulo is 0, put player to team 1
+                    if(modulo4 === 0) {
+                        team1.push(shuffledArray[0]);
+                        console.log("Team 1: " + team1)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 1");
+                    } else if(modulo4 === 2) {
+                        team2.push(shuffledArray[0]);
+                        console.log("Team 2: " + team2)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 2");
+                    } else if(modulo4 === 3) {
+                        team3.push(shuffledArray[0]);
+                        console.log("Team 2: " + team3)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 2");
+                    } else {
+                        team4.push(shuffledArray[0]);
+                        console.log("Team 2: " + team4)
+                        shuffledArray.shift();
+                        console.log(shuffledArray + " Fra shuffledArray 3");
+                    }
+                    console.log("Dette er i: " + i)
+                }
+                break;
+        }
+
+        console.log("Leftovers: " + shuffledArray);
+        console.log("Team 1: " + team1);
+        console.log("Team 2: " + team2);
+        console.log("Team 3: " + team3);
+        console.log("Team 4: " + team4);
     }
 
     return(
